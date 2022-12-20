@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-demo-app-1-conf
+  labels:
+    app: my-demo-app-1
+data:
+  index.html: |-
+{{ .Files.Get "files/index.html" | indent 4 }}
